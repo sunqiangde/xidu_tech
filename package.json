@@ -1,0 +1,26 @@
+{
+  "name": "xidu_tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run docs:dev",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunqiangde/xidu_tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunqiangde/xidu_tech/issues"
+  },
+  "homepage": "https://github.com/sunqiangde/xidu_tech#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

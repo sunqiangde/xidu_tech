@@ -1,0 +1,7 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="256" height="256" fill="white"/>
+<path d="M128 20C69.73 20 22 67.73 22 126C22 184.3 69.73 232 128 232C186.3 232 234 184.3 234 126C234 67.73 186.3 20 128 20ZM128 196C90.24 196 60 165.8 60 128C60 90.24 90.24 60 128 60C165.8 60 196 90.24 196 128C196 165.8 165.8 196 128 196Z" fill="#0B0B0D"/>
+<path d="M100 100H156V156H100V100Z" fill="#0B0B0D"/>
+<path d="M140 110H116V140H140V110Z" fill="white"/>
+<text x="128" y="200" text-anchor="middle" fill="#0B0B0D" font-family="Arial" font-size="14">微信二维码</text>
+</svg>

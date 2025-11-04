@@ -4,6 +4,9 @@
   import path from 'path';
 
   export default defineConfig({
+    // 为 GitHub Pages 设置 base 路径
+    // 如果你的仓库名称是 your-repo-name，请将 base 改为 /your-repo-name/
+    base: '/',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -50,11 +53,12 @@
       },
     },
     build: {
-      target: 'esnext',
-      outDir: 'build',
-    },
-    server: {
-      port: 3000,
-      open: true,
+      outDir: 'dist',
+      assetsDir: 'assets',
+      rollupOptions: {
+        output: {
+          manualChunks: undefined,
+        },
+      },
     },
   });

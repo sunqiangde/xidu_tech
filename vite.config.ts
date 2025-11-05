@@ -10,7 +10,8 @@
     // 为 GitHub Pages 设置 base 路径
     // 如果你的仓库名称是 your-repo-name，请将 base 改为 /your-repo-name/
     // 或者通过环境变量 VITE_BASE_PATH 设置
-    const basePath = env.VITE_BASE_PATH || (env.VITE_GITHUB_PAGES ? '/' : '/');
+    // const basePath = env.VITE_BASE_PATH || (env.VITE_GITHUB_PAGES ? '/' : '/');
+    const basePath = '/';
     
     return {
       base: basePath,

@@ -47,3 +47,58 @@ npm run dev
 ```bash
 npm run build
 ```
+
+构建用于 GitHub Pages 的版本：
+```bash
+npm run build:github
+```
+
+## 环境变量配置
+
+项目支持通过环境变量进行配置，特别是针对不同的部署环境：
+
+### 环境变量文件
+
+项目提供了以下环境变量文件：
+- `.env.example` - 环境变量模板文件，复制为 `.env.local` 并根据需要修改
+- `.env.github` - GitHub Pages 部署环境变量
+- `.env.development` - 开发环境变量（可选）
+- `.env.production` - 生产环境变量（可选）
+
+### GitHub Pages 部署
+
+项目已预配置了 `.env.github` 文件，用于 GitHub Pages 部署。如果您的仓库名称不是根域名路径，请修改 `.env.github` 文件中的 `VITE_BASE_PATH` 变量：
+
+```
+VITE_BASE_PATH=/your-repository-name/
+```
+
+### 自定义环境变量
+
+您可以通过创建 `.env.[mode]` 文件来为不同环境配置不同的变量，例如：
+- `.env.development` - 开发环境
+- `.env.production` - 生产环境
+- `.env.github` - GitHub Pages 部署环境
+
+然后使用相应的模式运行构建命令：
+```bash
+vite build --mode [mode]
+```
+
+#### 在代码中使用环境变量
+
+在您的代码中，可以通过 `import.meta.env` 访问环境变量：
+
+```javascript
+// 获取当前模式
+console.log(import.meta.env.MODE);
+
+// 获取自定义环境变量
+console.log(import.meta.env.VITE_GITHUB_PAGES);
+
+// 获取在 vite.config.ts 中定义的全局常量
+console.log(__APP_ENV__);
+console.log(__GITHUB_PAGES__);
+```
+
+更多示例请参考 `src/utils/env-example.ts` 文件。

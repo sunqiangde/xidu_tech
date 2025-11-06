@@ -30,7 +30,7 @@ export function Footer() {
             <div className="flex flex-col gap-3 text-gray-400">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#0F62FE]" />
-                <span>sunqiang@xidu-tech.com</span>
+                <span>bestsunqiang@foxmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#00BFA6]" />

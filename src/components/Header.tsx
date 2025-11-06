@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from '/logo.png';
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,8 +34,14 @@ export function Header() {
           {/* Logo */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-[#0F62FE] to-[#00BFA6] opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300" />
-            <a href="#" className="relative text-white tracking-wide">
-              喜都科技（吉林省）有限公司
+            <a href="#" className="relative flex items-center gap-3 text-white tracking-wide">
+              <img 
+                src={Logo} 
+                alt="喜都科技（吉林省）有限公司" 
+                className="h-10 w-auto object-contain rounded-sm"
+              />
+              <span className="hidden sm:inline">喜都科技（吉林省）有限公司</span>
+              <span className="sm:hidden">喜都科技（吉林省）有限公司</span>
             </a>
           </div>
 
